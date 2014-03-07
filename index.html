@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Hubot Script AppAnnie by meetsapp</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Hubot Script AppAnnie</h1>
+        <h2>AppAnnie analytics information provider script for Hubot</h2>
+        <a href="https://github.com/meetsapp/hubot-script-appannie" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="a-hubot-script-for-appannie" class="anchor" href="#a-hubot-script-for-appannie"><span class="octicon octicon-link"></span></a>A <a href="https://github.com/github/hubot">Hubot</a> script for <a href="http://www.appannie.com/">AppAnnie</a>
+</h1>
+
+<p><a href="http://www.appannie.com/">AppAnnie</a> tracks your apps metrics and has the best app store data
+to help you make smart business decisions.</p>
+
+<p>You should report any issues or submit any pull requests to the
+<a href="https://github.com/meetsapp/hubot-script-appannie">AppAnnie Script</a> repository.</p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>You will need to add <code>appannie.coffee</code> script to the <code>scripts</code> hubot folder.</p>
+
+<p>Then commit the changes to your hubot's git repository.</p>
+
+<h2>
+<a name="configuring-the-script" class="anchor" href="#configuring-the-script"><span class="octicon octicon-link"></span></a>Configuring the Script</h2>
+
+<p>The AppAnnie script requires the following environment variables.</p>
+
+<ul>
+<li>
+<code>ANNIE_TOKEN</code> (<a href="https://www.appannie.com/account/api/key/">Grab your account token from AppAnnie</a>)</li>
+</ul><p>Once you have your token you will need to supply the account and app information you want to track.</p>
+
+<p>Get your account id by asking to your hubot <code>annie accounts</code></p>
+
+<ul>
+<li><code>ANNIE_ACCOUNT_ID_IOS</code></li>
+<li><code>ANNIE_ACCOUNT_ID_ANDROID</code></li>
+</ul><p>Once the account id is supplied you must set-up your app id.
+You may ask to your hubot <code>annie apps android</code> or <code>annie apps ios</code> to know the apps id you own</p>
+
+<ul>
+<li><code>ANNIE_APP_ID_IOS</code></li>
+<li><code>ANNIE_APP_ID_ANDROID</code></li>
+</ul><p>Optional, bound the results to a set of countries, default <code>US</code></p>
+
+<ul>
+<li>
+<code>ANNIE_COUNTRIES</code> The format is a plus-separated list of country code. For example: “US+FR” will return the sales data in America and France. <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">More info</a>
+</li>
+</ul><p>Now you can <strong>start using your new shiny Hubot script</strong>.</p>
+
+<h3>
+<a name="commands" class="anchor" href="#commands"><span class="octicon octicon-link"></span></a>Commands</h3>
+
+<ul>
+<li>
+<code>annie accounts</code> - Returns AppAnnie acounts information for set-up</li>
+<li>
+<code>annie apps &lt;platform&gt;</code> - Returns AppAnnie apps information for set-up</li>
+<li>
+<code>annie downloads &lt;platform&gt;</code> - Returns last known day downloads data for selected platform</li>
+<li>
+<code>annie downloads &lt;platform&gt; &lt;range&gt;</code> - Returns last known time range downloads data for selected platform</li>
+</ul><p>Where <code>&lt;platform&gt;</code> could be "ios" or "android" and <code>&lt;range&gt;</code> "today", "week" or "month"</p>
+
+<h3>
+<a name="configuring-the-variables-on-heroku" class="anchor" href="#configuring-the-variables-on-heroku"><span class="octicon octicon-link"></span></a>Configuring the variables on Heroku</h3>
+
+<pre><code>% heroku config:add ANNIE_TOKEN="..."
+% ...
+</code></pre>
+
+<h3>
+<a name="configuring-the-variables-on-unix" class="anchor" href="#configuring-the-variables-on-unix"><span class="octicon octicon-link"></span></a>Configuring the variables on UNIX</h3>
+
+<pre><code>% export ANNIE_TOKEN="..."
+% ...
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/meetsapp/hubot-script-appannie/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/meetsapp/hubot-script-appannie/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/meetsapp/hubot-script-appannie"></a> is maintained by <a href="https://github.com/meetsapp">meetsapp</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
